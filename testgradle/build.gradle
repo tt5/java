@@ -1,0 +1,24 @@
+plugins {
+    id 'application'
+}
+
+apply plugin: 'application'
+mainClassName = 'EmployeeApp'
+
+println 'This is executed during configuration phase'
+task configured {
+    println 'The project is configured'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
+}
+
+repositories {
+    mavenCentral()
+}

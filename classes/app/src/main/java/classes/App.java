@@ -15,6 +15,5 @@ public class App {
         myclass.set("hello");
         String s = myclass.get();
         System.out.println(s);
-        System.out.println(new App().getPath());
     }
 }
